@@ -23,7 +23,7 @@ if __name__ == '__main__':
         install_requires=requirements,
         packages=find_packages(
             include=[
-                'isn_project*'
+                'isn*'
             ],
             exclude=[
                 '*tests*'
@@ -32,7 +32,8 @@ if __name__ == '__main__':
         extras_require={
             "dev": [
                 "tox",
-                "sphinx"
+                "sphinx",
+                "opencv-python"
             ]
         },
         package_data={'': ['*.json', '*.yml']},
