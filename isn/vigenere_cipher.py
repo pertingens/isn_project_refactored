@@ -4,8 +4,9 @@
 
 import numpy as np
 
-from .cesar_cipher import cesar_encode_chr
+from .caesar_cipher import caesar_encode_chr
 from .base_cipher_class import BaseCipherAlgorithm
+
 
 def _ord_key_letter(letter: str):
     letter = ord(letter)
@@ -41,7 +42,7 @@ class VigenereCipher(BaseCipherAlgorithm):
         message = list(message)
 
         for i in range(len(message)):
-            message[i] = cesar_encode_chr(message[i], shift_list[i])
+            message[i] = caesar_encode_chr(message[i], shift_list[i])
 
         return "".join(message)
 
@@ -51,7 +52,7 @@ class VigenereCipher(BaseCipherAlgorithm):
         message = list(message)
 
         for i in range(len(message)):
-            message[i] = cesar_encode_chr(message[i], -shift_list[i])
+            message[i] = caesar_encode_chr(message[i], -shift_list[i])
 
         return "".join(message)
 

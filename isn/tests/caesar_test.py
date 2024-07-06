@@ -4,21 +4,21 @@
 
 import unittest
 
-from isn import CesarCipher
+from isn import CaesarCipher
 
 
-class TestCesar(unittest.TestCase):
+class TestCaesar(unittest.TestCase):
     def test_encode(self):
         message = "Hello, world!"
         expected = "Khoor, zruog!"
 
-        self.assertEqual(CesarCipher.encode(message, 3), expected)
+        self.assertEqual(CaesarCipher.encode(message, 3), expected)
 
     def test_decode(self):
         expected = "Hello, world!"
         message = "Khoor, zruog!"
 
-        self.assertEqual(CesarCipher.decode(message, 3), expected)
+        self.assertEqual(CaesarCipher.decode(message, 3), expected)
 
 
 if __name__ == "__main__":

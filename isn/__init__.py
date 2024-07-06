@@ -1,4 +1,4 @@
-from .cesar_cipher import CesarCipher  # noqa: F401
+from .caesar_cipher import CaesarCipher  # noqa: F401
 from .vigenere_cipher import VigenereCipher  # noqa: F401
 from .steganography import Steganography  # noqa: F401
 

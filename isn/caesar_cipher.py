@@ -5,11 +5,8 @@
 from .base_cipher_class import BaseCipherAlgorithm
 
 
-def cesar_encode_chr(
-        char: str, 
-        shift: int
-) -> str:
-    """ Encode a character using a shifting mechanism
+def caesar_encode_chr(char: str, shift: int) -> str:
+    """Encode a character using a shifting mechanism
 
     This function is used to encode a letter based on a shifting
     mechanism. The letter is first converted to its ASCII representation
@@ -29,7 +26,9 @@ def cesar_encode_chr(
         str: The encoded letter
     """
     if len(char) > 1 or len(char) < 1:
-        raise ValueError(f"The character to encode should be exactly of lenght one, not {char}")
+        raise ValueError(
+            f"The character to encode should be exactly of lenght one, not {char}"
+        )
 
     char = ord(char)
 
@@ -45,21 +44,22 @@ def cesar_encode_chr(
     return chr(char)
 
 
-class CesarCipher(BaseCipherAlgorithm):
-    """ Cesar cipher implementation
+class CaesarCipher(BaseCipherAlgorithm):
+    """Caesar cipher implementation
 
     This class implements the Cesar cipher cryptographic algorithm. More
-    information about the algorithm can be found on wikipedia at the 
+    information about the algorithm can be found on wikipedia at the
     following link:
 
     https://en.wikipedia.org/wiki/Caesar_cipher
     """
+
     @staticmethod
     def encode(
         message: str,
         shift: int,
     ) -> str:
-        """ Cesar encode method
+        """Caesar encode method
 
         Args:
             message (str): _description_
@@ -68,15 +68,12 @@ class CesarCipher(BaseCipherAlgorithm):
         Returns:
             str: _description_
         """
-        message = list(map(lambda x: cesar_encode_chr(x, shift), message))
+        message = list(map(lambda x: caesar_encode_chr(x, shift), message))
         return "".join(message)
 
     @staticmethod
-    def decode(
-        message: str, 
-        shift: int
-    ) -> str:
-        """ Cesar decode method
+    def decode(message: str, shift: int) -> str:
+        """Caesar decode method
 
         Args:
             message (str): _description_
@@ -85,5 +82,5 @@ class CesarCipher(BaseCipherAlgorithm):
         Returns:
             str: _description_
         """
-        message = list(map(lambda x: cesar_encode_chr(x, -shift), message))
+        message = list(map(lambda x: caesar_encode_chr(x, -shift), message))
         return "".join(message)
