@@ -1,3 +1,7 @@
+# MIT License
+# Copyright (c) 2024, Pertingens
+
+
 import unittest
 
 from isn import CesarCipher

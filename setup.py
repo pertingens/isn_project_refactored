@@ -1,3 +1,7 @@
+# MIT License
+# Copyright (c) 2024, Pertingens
+
+
 from setuptools import setup, find_packages
 
 VERSION = '0.0.1'

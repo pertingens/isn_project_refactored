@@ -1,7 +1,11 @@
+# MIT License
+# Copyright (c) 2024, Pertingens
+
+
 import numpy as np
 
-from .cesar_cipher import cesar_encode_letter
-
+from .cesar_cipher import cesar_encode_chr
+from .base_cipher_class import BaseCipherAlgorithm
 
 def _ord_key_letter(letter: str):
     letter = ord(letter)
@@ -30,14 +34,14 @@ def _generate_shift_list(
     return shift_list
 
 
-class VigenereCipher:
+class VigenereCipher(BaseCipherAlgorithm):
     @staticmethod
     def encode(message: str, key: str) -> str:
         shift_list = _generate_shift_list(key, message)
         message = list(message)
 
         for i in range(len(message)):
-            message[i] = cesar_encode_letter(message[i], shift_list[i])
+            message[i] = cesar_encode_chr(message[i], shift_list[i])
 
         return "".join(message)
 
@@ -47,7 +51,7 @@ class VigenereCipher:
         message = list(message)
 
         for i in range(len(message)):
-            message[i] = cesar_encode_letter(message[i], -shift_list[i])
+            message[i] = cesar_encode_chr(message[i], -shift_list[i])
 
         return "".join(message)
 

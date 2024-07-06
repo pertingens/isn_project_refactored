@@ -1,7 +1,13 @@
+# MIT License
+# Copyright (c) 2024, Pertingens
+
+
 import numpy as np
 
+from .base_cipher_class import BaseCipherAlgorithm
 
-class Steganography:
+
+class Steganography(BaseCipherAlgorithm):
     @staticmethod
     def encode(message: str, image: np.ndarray, chunk_size: int = 4):
         # Check  if parameters are correct
@@ -81,7 +87,3 @@ class Steganography:
             raise ValueError("No message found in the image")
 
         return message[0]
-
-
-if __name__ == "__main__":
-    pass
