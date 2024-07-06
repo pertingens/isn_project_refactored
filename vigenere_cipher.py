@@ -9,10 +9,10 @@ def _ord_key_letter(letter: str):
         return letter - ord('a')
 
     elif letter >= ord('A') and letter <= ord('Z'):
-        letter - ord('A')
+        return letter - ord('A')
 
     elif letter >= ord('0') and letter <= ord('9'):
-        letter - ord('0')
+        return letter - ord('0')
 
     return 0
 
@@ -56,7 +56,7 @@ class VigenereCipher:
 
 if __name__ == "__main__":
     message = "hello world, this is a test message, to determine if the vigenere class is working!!!!"
-    key = "tes /t, this is a test key"
+    key = "tes /t, this is a test 9 A key"
     encoded = VigenereCipher.encode(message, key)
 
     print(encoded)
