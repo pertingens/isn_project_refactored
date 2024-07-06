@@ -33,7 +33,9 @@ if __name__ == '__main__':
             "dev": [
                 "tox",
                 "sphinx",
-                "opencv-python"
+                "sphinx_rtd_theme",
+                "opencv-python",
+                'myst-parser'
             ]
         },
         package_data={'': ['*.json', '*.yml']},
