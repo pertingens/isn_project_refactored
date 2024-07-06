@@ -3,7 +3,7 @@ import numpy as np
 
 class Steganography:
     @staticmethod
-    def encode_image(message: str, image: np.ndarray, chunk_size: int = 4):
+    def encode(message: str, image: np.ndarray, chunk_size: int = 4):
         # Check  if parameters are correct
         if chunk_size < 1 or chunk_size > 8:
             raise ValueError(
@@ -59,7 +59,7 @@ class Steganography:
         return image
 
     @staticmethod
-    def decode_image(image: np.ndarray, chunk_size: int = 4):
+    def decode(image: np.ndarray, chunk_size: int = 4):
         binary_message = []
         mask_pixel = np.uint8(2**chunk_size - 1)
         image = image.flatten()
