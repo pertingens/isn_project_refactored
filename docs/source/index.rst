@@ -10,6 +10,10 @@ Welcome to ISN Refactored Project's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   page/user_guide
+   page/developer_guide
+   page/endpoint
+
 
 
 Indices and tables
