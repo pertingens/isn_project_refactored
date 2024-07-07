@@ -5,7 +5,8 @@
 This project aims to refactor all the codes and projects that was done during 
 the ICN and ISN courses, mainly for entertaiment purposes.
 
-The documenation will be available soon.
+The documenation is availabe at the following link: https://pertingens.github.io/isn_project_refactored/index.html
+
 
 ## License
 
