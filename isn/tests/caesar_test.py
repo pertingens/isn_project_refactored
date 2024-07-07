@@ -4,7 +4,7 @@
 
 import unittest
 
-from isn import CaesarCipher
+from isn.cryptography import CaesarCipher
 
 
 class TestCaesar(unittest.TestCase):

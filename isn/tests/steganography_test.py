@@ -7,7 +7,7 @@ import cv2
 import unittest
 import numpy as np
 
-from isn import Steganography
+from isn.cryptography import Steganography
 
 
 class SteganographyTest(unittest.TestCase):

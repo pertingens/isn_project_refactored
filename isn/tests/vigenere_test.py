@@ -4,7 +4,7 @@
 
 import unittest
 
-from isn import VigenereCipher
+from isn.cryptography import VigenereCipher
 
 
 class VigenereTest(unittest.TestCase):

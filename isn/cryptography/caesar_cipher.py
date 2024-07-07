@@ -61,12 +61,14 @@ class CaesarCipher(BaseCipherAlgorithm):
     ) -> str:
         """Caesar encode method
 
+        This method map the caesar_encode_chr function over the input message.
+
         Args:
-            message (str): _description_
-            shift (int): _description_
+            message (str): The message to encode
+            shift (int): The shift to use to encode the message
 
         Returns:
-            str: _description_
+            str: The encoded message
         """
         message = list(map(lambda x: caesar_encode_chr(x, shift), message))
         return "".join(message)
@@ -75,12 +77,15 @@ class CaesarCipher(BaseCipherAlgorithm):
     def decode(message: str, shift: int) -> str:
         """Caesar decode method
 
+        This method map the caesar_encode_chr function over the message
+        but using -1*shift as shift parameter to decode the message.
+
         Args:
-            message (str): _description_
-            shift (int): _description_
+            message (str): The message to decode
+            shift (int): The shift used to encode the message
 
         Returns:
-            str: _description_
+            str: The decoded message
         """
         message = list(map(lambda x: caesar_encode_chr(x, -shift), message))
         return "".join(message)
